@@ -1,166 +1,181 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PMI Creation</title>
-  <meta name="description" content="PMI Creation - HSC Physics, Math & ICT courses | Free & Paid batches" />
-  <style>
-    :root{
-      --accent:#0ea5a4;
-      --dark:#0f172a;
-      --muted:#6b7280;
-      --card:#f8fafc;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,#f1f5f9 0%, #ffffff 100%);color:var(--dark);}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:52px;height:52px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px}
-    nav a{margin-left:14px;text-decoration:none;color:var(--dark);font-weight:600}
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:30px 0}
-    .hero h1{font-size:34px;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0 0 18px;line-height:1.6}
-    .cta{display:flex;gap:10px}
-    .btn{padding:12px 16px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
-    .btn-primary{background:var(--accent);color:white}
-    .btn-ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
-    .course-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px}
-    .course{padding:12px;border-radius:10px;background:white;border:1px solid #eef2f7}
-    .course h4{margin:0 0 6px}
-    .course p{margin:0;color:var(--muted);font-size:14px}
-    footer{padding:28px 0;color:var(--muted);font-size:14px}
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}
-      .course-list{grid-template-columns:1fr}
-      nav a{display:none}
-      header{gap:12px}
-    }
-    form .row{display:flex;gap:10px}
-    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #e6edf3}
-    textarea{min-height:100px}
-    .muted{color:var(--muted);font-size:13px}
-    .badge{background:#e6fffa;color:#065f46;padding:6px 8px;border-radius:999px;font-weight:700;font-size:12px}
-    .youtube-embed{width:100%;height:210px;border-radius:8px;border:0}
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">PMI</div>
-        <div>
-          <div style="font-weight:800">PMI Creation</div>
-          <div class="muted" style="font-size:13px">HSC Physics · Math · ICT</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#courses">Courses</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+# PMI-Creation
 
-    <section class="hero">
-      <div>
-        <div class="badge">Free + Paid Batches</div>
-        <h1>PMI Creation — HSC পারফর্ম্যান্স বাড়ান, প্রতিদিন ভিডিও</h1>
-        <p>প্রফেশনাল কনটেন্ট — সংক্ষিপ্ত টপিক, ক্লিয়ার কনসেপ্ট, প্রতিদিন একটি ভিডিও। ফ্রি টিউটোরিয়াল থেকে অ্যাডভান্সড পেইড ব্যাচ — আপনার প্রয়োজন মতো পরিকল্পনা আছে।</p>
-        <div class="cta">
-          <button class="btn btn-primary" onclick="openLink('https://youtube.com')">YouTube Channel</button>
-          <button class="btn btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Join Batch</button>
-        </div>
-      </div>
-      <aside>
-        <div class="card">
-          <strong>Featured video</strong>
-          <iframe class="youtube-embed" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video" allowfullscreen></iframe>
-          <div style="margin-top:10px" class="muted">ভিডিও: HSC Physics - Motion (Lecture 1)</div>
-        </div>
-      </aside>
-    </section>
+This repo contains **Frontend (React + Tailwind + Firebase)** and **Backend (Node.js + Express + Firebase Admin + Payment Integration)** for paid video platform.
 
-    <section id="courses">
-      <h2>Courses</h2>
-      <div class="course-list">
-        <div class="course">
-          <h4>HSC Physics (1st Paper)</h4>
-          <p>Concept videos, solved problems, past questions practice.</p>
-        </div>
-        <div class="course">
-          <h4>HSC Math</h4>
-          <p>Higher math, calculus, and algebra sessions with step-by-step solutions.</p>
-        </div>
-        <div class="course">
-          <h4>HSC ICT</h4>
-          <p>Practical and theory — HTML, CSS, basic programming & ICT projects.</p>
-        </div>
-        <div class="course">
-          <h4>Paid Crash Course</h4>
-          <p>Exam strategy, mock tests, and personal feedback.</p>
-        </div>
-      </div>
-    </section>
+## Structure
 
-    <section id="about" style="margin-top:20px">
-      <div class="card">
-        <h3>About PMI Creation</h3>
-        <p class="muted">PMI Creation aims to provide concise, exam-focused tutorials for HSC students. Daily videos, clear notes, and both free and paid options to match different budgets.</p>
-      </div>
-    </section>
 
-    <section id="contact" style="margin-top:18px">
-      <div class="card">
-        <h3>Contact & Registration</h3>
-        <form id="regForm" onsubmit="handleSubmit(event)">
-          <div class="row" style="margin-top:10px">
-            <input type="text" id="name" placeholder="Full name" required />
-            <input type="text" id="phone" placeholder="Phone / WhatsApp" required />
-          </div>
-          <div style="margin-top:10px">
-            <input type="email" id="email" placeholder="Email (optional)" />
-          </div>
-          <div style="margin-top:10px">
-            <select id="interest">
-              <option value="physics">HSC Physics</option>
-              <option value="math">HSC Math</option>
-              <option value="ict">HSC ICT</option>
-              <option value="paid">Paid Crash Course</option>
-            </select>
-          </div>
-          <div style="margin-top:10px">
-            <textarea id="note" placeholder="Message / Questions (optional)"></textarea>
-          </div>
-          <div style="margin-top:12px;display:flex;gap:8px">
-            <button class="btn btn-primary" type="submit">Request Info</button>
-            <button class="btn" type="button" onclick="clearForm()">Clear</button>
-          </div>
-          <div id="result" style="margin-top:8px;color:green;font-weight:700;display:none">Request sent (demo)</div>
-        </form>
-      </div>
-    </section>
+## Deployment
 
-    <footer>
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-        <div class="muted">© PMI Creation — Designed for HSC students</div>
-        <div class="muted">Made by Nur</div>
-      </div>
-    </footer>
-  </div>
+1. Create Firebase project and storage bucket.
+2. Add Firebase service account JSON in `.env`.
+3. Set payment gateway credentials (SSLCOMMERZ/bKash/Nagad) in `.env`.
+4. Deploy backend (Railway, Vercel, or local Node.js).
+5. Deploy frontend (Vercel, Firebase Hosting, or local React app).
+PORT=5000
+PUBLIC_URL=http://localhost:5173
+FIREBASE_SERVICE_ACCOUNT_JSON="{...paste service account JSON here...}"
+FIREBASE_STORAGE_BUCKET=your-bucket-name.appspot.com
 
-  <script>
-    function openLink(url){ window.open(url, '_blank') }
-    function handleSubmit(e){
-      e.preventDefault();
-      document.getElementById('result').style.display='block';
-      setTimeout(()=>{
-        document.getElementById('result').style.display='none';
-      },3500);
-    }
-    function clearForm(){ document.getElementById('regForm').reset(); }
-  </script>
-</body>
-</html>
+# SSLCOMMERZ
+SSLCOMMERZ_STORE_ID=your_store_id
+SSLCOMMERZ_STORE_PASS=your_store_pass
+SSLCOMMERZ_SANDBOX_URL=https://sandbox.sslcommerz.com/gwprocess/v4/api.php
+
+# Telegram (optional)
+TELEGRAM_BOT_TOKEN=123456:ABC-DEF...
+{
+  "name": "pmi-creation-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "firebase-admin": "^11.10.0",
+    "node-fetch": "^2.6.7",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const admin = require('firebase-admin');
+const fetch = require('node-fetch');
+const crypto = require('crypto');
+const cors = require('cors');
+
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET
+});
+
+const db = admin.firestore();
+const bucket = admin.storage().bucket();
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+function makeToken(len = 16) {
+  return crypto.randomBytes(len).toString('hex');
+}
+
+// Create payment
+app.post('/api/create-payment', async (req, res) => {
+  try {
+    const { amount, buyer_name, buyer_email, videoId, returnUrl } = req.body;
+    if (!amount || !videoId) return res.status(400).json({ error: 'missing fields' });
+
+    const orderRef = await db.collection('orders').add({
+      videoId, amount, status: 'pending', buyer_name, buyer_email,
+      createdAt: admin.firestore.FieldValue.serverTimestamp()
+    });
+
+    const payload = {
+      store_id: process.env.SSLCOMMERZ_STORE_ID,
+      store_passwd: process.env.SSLCOMMERZ_STORE_PASS,
+      total_amount: amount,
+      currency: 'BDT',
+      tran_id: orderRef.id,
+      success_url: (returnUrl || process.env.PUBLIC_URL) + '/payment-success',
+      fail_url: (returnUrl || process.env.PUBLIC_URL) + '/payment-fail',
+      cancel_url: (returnUrl || process.env.PUBLIC_URL) + '/payment-cancel',
+      product_category: 'Video',
+      product_name: 'Course Video Access',
+      cus_name: buyer_name || '',
+      cus_email: buyer_email || ''
+    };
+
+    const resp = await fetch(process.env.SSLCOMMERZ_SANDBOX_URL, {
+      method: 'POST',
+      body: new URLSearchParams(payload)
+    });
+    const json = await resp.json();
+    if (json && json.GatewayPageURL) return res.json({ url: json.GatewayPageURL });
+    return res.status(500).json({ error: 'payment init failed', detail: json });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Payment callback
+app.post('/api/payment-callback', async (req, res) => {
+  try {
+    const data = req.body;
+    const tran_id = data.tran_id;
+    if (!tran_id) return res.status(400).send('no tran_id');
+
+    const orderRef = db.collection('orders').doc(tran_id);
+    const orderSnap = await orderRef.get();
+    if (!orderSnap.exists) return res.status(404).send('order not found');
+
+    await orderRef.update({
+      status: 'paid',
+      gatewayData: data,
+      paidAt: admin.firestore.FieldValue.serverTimestamp()
+    });
+
+    const accessToken = makeToken(12);
+    await db.collection('access').add({
+      orderId: tran_id,
+      videoId: orderSnap.data().videoId,
+      token: accessToken,
+      expiresAt: admin.firestore.Timestamp.fromDate(new Date(Date.now() + (24*60*60*1000))),
+      createdAt: admin.firestore.FieldValue.serverTimestamp()
+    });
+
+    res.send('OK');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('error');
+  }
+});
+
+// Get signed URL
+app.get('/api/signed-url', async (req, res) => {
+  try {
+    const { token } = req.query;
+    if (!token) return res.status(400).json({ error: 'missing token' });
+
+    const q = await db.collection('access').where('token', '==', token).limit(1).get();
+    if (q.empty) return res.status(403).json({ error: 'invalid token' });
+    const acc = q.docs[0].data();
+    if (acc.expiresAt.toDate() < new Date()) return res.status(403).json({ error: 'expired' });
+
+    const vidSnap = await db.collection('videos').doc(acc.videoId).get();
+    if (!vidSnap.exists) return res.status(404).json({ error: 'video not found' });
+
+    const filePath = vidSnap.data().storagePath;
+    const expires = Date.now() + 15*60*1000;
+    const [url] = await bucket.file(filePath).getSignedUrl({ action: 'read', expires: expires });
+    return res.json({ url });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log('Backend running on port', PORT));
+const TelegramBot = require('node-telegram-bot-api');
+const token = process.env.TELEGRAM_BOT_TOKEN;
+const bot = new TelegramBot(token, { polling: false });
+
+async function sendTokenToUser(chatId, tokenValue) {
+  try {
+    await bot.sendMessage(chatId, `আপনার ভিডিও access token: ${tokenValue}\nUse it at: ${process.env.PUBLIC_URL}/redeem`);
+    return true;
+  } catch (err) {
+    console.error(err);
+    return false;
+  }
+}
+
+module.exports = { sendTokenToUser };
